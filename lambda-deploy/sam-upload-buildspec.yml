@@ -25,10 +25,10 @@ phases:
         sam package \
         --template-file template.yml \
         --output-template-file ${service}.package.yml \
-        --s3-bucket lambdas-zips-us-east-1-wk3v4d \
+        --s3-bucket lambdas-zips-us-east-1-l337 \
         --s3-prefix hello-world
       - |
         aws s3api put-object \
         --body helloworld.package.yml \
-        --bucket lambdas-zips-us-east-1-wk3v4d \
+        --bucket lambdas-zips-us-east-1-1337 \
         --key hello-world/helloworld.package.yml

@@ -88,7 +88,7 @@ Resources:
           Principal:
             Service: codebuild.amazonaws.com
       Path: /
-      RoleName: !Sub "codebuild-${CodeBuildType}-role"
+      RoleName: !Sub "codebuild-${Env}-${CodeBuildType}-role"
   
 #  RootInstanceProfile:
 #    Type: AWS::IAM::InstanceProfile
@@ -134,6 +134,6 @@ Resources:
               - 'logs:CreateLogStream'
               - 'logs:PutLogEvents'
             Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:lambda-deploy-log:log-stream:*"
+             - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
       Roles:
         - !Ref CodeBuildRole
