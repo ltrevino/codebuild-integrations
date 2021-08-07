@@ -120,7 +120,7 @@ Resources:
           - Effect: Allow
             Action:
               - 's3:PutObject'
-              - 's3:GetObject'
+              - 's3:HeadObject'
             Resource:
               - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*"
               - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*/*"
