@@ -126,11 +126,6 @@ Resources:
               - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*/*"
           - Effect: Allow
             Action:
-              - 'cloudformation:CreateChangeSet'
-            Resource:
-              - !Sub 'arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/*'
-          - Effect: Allow
-            Action:
               - 's3:GetObject'
             Resource:
               - !Sub "arn:aws:s3:::codepipeline-${AWS::Region}-*"
