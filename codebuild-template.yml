@@ -124,12 +124,12 @@ Resources:
             Resource:
               - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*"
               - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*/*"
-	  - Effect: Allow
-            Action: 
+          - Effect: Allow
+            Action:
               - 'cloudformation:CreateChangeSet'
             Resource:
               - !Sub 'arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/*'
-	  - Effect: Allow
+          - Effect: Allow
             Action:
               - 's3:GetObject'
             Resource:
